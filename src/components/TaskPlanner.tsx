@@ -100,8 +100,8 @@ const TaskPlanner = () => {
   }
 
   return (
-    <div className="p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full p-4 sm:p-6 md:p-8">
+      <div className="w-full max-w-7xl mx-auto">
         <p className="text-orange-400 mb-8">Plan your day with AI-powered scheduling</p>
 
         {error && (
