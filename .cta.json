@@ -1,0 +1,18 @@
+{
+  "projectName": "daily-planner",
+  "framework": "react",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "pnpm",
+  "toolchain": "none",
+  "mode": "file-router",
+  "git": true,
+  "variableValues": {},
+  "version": 1,
+  "existingAddOns": [
+    "shadcn",
+    "form",
+    "tanstack-query",
+    "store"
+  ]
+}
