@@ -150,14 +150,14 @@ export const planTasks = async (tasks: Task[]): Promise<ScheduledTask[]> => {
         })
         
         // Sort the schedule by time
-        validatedSchedule.sort((a, b) => {
+        validatedSchedule.sort((a: { sortTime: { split: (arg0: string) => { (): any; new(): any; map: { (arg0: NumberConstructor): [any, any]; new(): any } } } }, b: { sortTime: { split: (arg0: string) => { (): any; new(): any; map: { (arg0: NumberConstructor): [any, any]; new(): any } } } }) => {
           const [aHours, aMinutes] = a.sortTime.split(':').map(Number)
           const [bHours, bMinutes] = b.sortTime.split(':').map(Number)
           return (aHours * 60 + aMinutes) - (bHours * 60 + bMinutes)
         })
         
         // Remove the sortTime property before returning
-        return validatedSchedule.map(({ sortTime, ...rest }) => rest)
+        return validatedSchedule.map(({ sortTime, ...rest }: { sortTime: string, [key: string]: any }) => rest)
       } catch (error) {
         if (error instanceof GeminiError) {
           throw error
